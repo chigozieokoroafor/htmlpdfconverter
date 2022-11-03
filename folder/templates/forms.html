@@ -1,0 +1,227 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <form method="POST" action="/user/fillform"> 
+        {{form.hidden_tag()}}
+        <div class="title"> <h3>A. PERSONAL DATA</h2></div> <!--this part is the section for personal data-->
+        <div class="row">
+            <div class="col-10">
+                <label for="fname">Full Name:</label>
+                
+            </div>
+            <div class="col-90">
+                <!--<input type="text" id="fname" name="firstname" placeholder="Enter your Fullname name"> -->
+                {{form.fullname}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <label for="email">Email:</label>
+            </div>
+            <div class="col-90">
+                <!--<input type="email" id="email" name="email" placeholder="it should contain @,."> -->
+                {{form.primary_email}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <label for="mobile">Mobile:</label>
+            </div>
+            <div class="col-90">
+                <!--<input type="tel" id="mobile" name="mobile" placeholder="only 10 digits are allowed">-->
+                {{form.phone}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <label for="gender" required>Gender:</label>
+            </div>
+            <div class="col-90">
+                <!-- <input type="radio" id="male" name="gender" value="male"/>Male
+                <input type="radio" id="female" name="gender" value="female"/>Female -->
+                {{form.gender}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <label for="dob">Date Of Birth:</label>
+            </div>
+            {{form.dob}}
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <label for="address">Permanent Address:</label>
+            </div>
+            <div class="col-90">
+                {{form.res_address}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <label for="nationality" required>Nationality:</label>
+            </div>
+            <div class="col-90">
+                <input type="text" id="nationality" class="form" name="nationality"><br>
+                <!--<input type="radio" id="Single" name="gender" value="Single"/>Single
+                <input type="radio" id="Married" name="gender" value="Married"/>Married
+                <input type="radio" id="Divorced" name="gender" value="Divorced"/>Divorced -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <label for="email">State Of Origin:</label>
+            </div>
+            <div class="col-90">
+                <input type="text" id="State-Origin" name="State-Origin" >
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <label for="email">Senatorial District:</label>
+            </div>
+            <div class="col-90">
+                <input type="text" id="Senatorial-District" name="Senatorial-District" >
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <label for="email">Local Government Area:</label>
+            </div>
+            <div class="col-90">
+                <input type="text" id="LocalGovernmentArea" name="LGA">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <label for="city">City:</label>
+            </div>
+            <div class="col-90">
+                <input type="text" id="city" name="city" maxlength="10">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <label for="gender" required>Marital Status:</label>
+            </div>
+            <div class="col-90">
+                <!--<input type="radio" id="Single" name="gender" value="Single"/>Single
+                <input type="radio" id="Married" name="gender" value="Married"/>Married
+                <input type="radio" id="Divorced" name="gender" value="Divorced"/>Divorced -->
+                {{form.marital_status}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <label for="state">Number Of Children And Ages:</label>
+            </div>
+            <div class="col-90">
+                <textarea type="text" id="ChildrenAndAges" name="ChildrenAndAges" cols="20" rows="10"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <label for="email">Next of Kin:</label>
+            </div>
+            <div class="col-90">
+                <input type="text" id="NextOfKin" name="NextOfKin">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <label for="qualification" required >Qualification:</label>
+            </div>
+            <div class="col-90">
+                <select name="qualification" id="qualification">
+                    <option value=" ">Select Qualification:</option>
+                    <option value="Graduation">Graduation</option>
+                    <option value="BTech.">BTech.</option>
+                    <option value="MTech.">MTech.</option>
+                    <option value="MCA">MCA</option>
+                    <option value="BCA">BCA</option>
+                </select>
+            </div>
+        </div>
+
+        <!--this part is the section for personal data-->
+        <div class="educate"> 
+                <h3>B. EDUCATIONAL BACKGROUND</h3>
+        </div>
+                <p style="font-style: italic;">(chronologically arranged from the earliest to latest)</p>
+            
+                <div class="col-10">
+                    <label class="row">Higher Educational Institutions Attended with Dates:</label><br>
+                </div>
+
+                <div class="col-90">
+                    <textarea type="text" name="educational_instituition" cols="20" rows="10"></textarea>
+                </div>
+
+                <div class="col-10">
+                    <label class="row">Academic/Professional Qualifications and Distinctions Obtained with Dates</label><br>
+                </div>
+
+                <div class="col-90">
+                    <textarea type="text" name="professional_qualifications" ></textarea>
+                </div>
+
+                <div class="col-10">
+                    <label class="row">Other Distinctions and Awards with Dates</label> <br> 
+                </div>
+                <div class="col-10">
+                    <label class="row">(a) Scholarships</label><br>
+                </div>
+
+                <div class="col-90">
+                <textarea type="text" name="scholarships" ></textarea>
+                </div>
+                    <div>
+                        <label class="form-label">(b) Fellowships</label><br>
+                        
+                    </div>
+                    <div class="col-90">
+                        <textarea type="text" name="scholarships" ></textarea>
+                    </div >
+                    <div class="col-10">
+                        <label class="form-label">(c) Research Grants</label><br>
+                    </div>
+                    <div class="col-90">
+                        <textarea type="text" name="scholarships" ></textarea>
+                    </div>
+                    <div class="col-10">
+                        <label class="form-label">(d) National Awards</label><br>
+                    </div>
+                    <div class="col-90">
+                        <textarea type="text" name="scholarships" ></textarea>
+                    </div>
+                    <div class="col-10">
+                        <label class="form-label">(e) International Awards</label><br>
+                    </div>
+                    <div class="col-90">
+                        <textarea type="text" name="scholarships" ></textarea>
+                        </div>
+                </div>
+                
+         
+        
+
+
+        <div class="title"> <h3>C. WORK EXPERIENCE</h2></div> <!--this part is the section for personal data-->
+        
+        <div class="title"> <h3>D. MEMBERSHIP OF PROFESSIONAL BODIES</h2></div> <!--this part is the section for personal data-->
+        
+        <div class="title"> <h3>E. PUBLICATIONS DATA</h2></div> <!--this part is the section for personal data-->
+        <div class="title"> <h3>F. PROFESSIONAL ACCOMPLISHMENTS</h2></div> <!--this part is the section for personal data-->
+        <div class="title"> <h3>G. CONFERENCES, SEMINARS AND WORKSHOPS ATTENDED WITH DATES:</h2></div> <!--this part is the section for personal data-->
+        <div class="title"> <h3>H. CURRENT RESEARCH ACTIVITIES: </h2></div> <!--this part is the section for personal data-->
+        <div class="title"> <h3>I. OTHER RELEVANT INFORMATION: </h2></div> <!--this part is the section for personal data-->
+        <div class="title"> <h3>J. CONTRIBUTION TO KNOWLEDGE</h2></div> <!--this part is the section for personal data-->
+
+
+        <div class="row">
+            <input type="submit" value="View"> <!--onclick="SaveStudentDetails()"> -->
+        </div>         
+    </form>
+</div>  
+{% endblock %}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+        <meta charset="UTF-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Responsive Registaration Form</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='static.css') }}">
+        {% block head %}
+        <!--{{url_for('static', filename='static.css')}} -->
+        <!--<script type="text/javascript" lang="javascript" src="./responsiveRegistaration.js"></script> -->
+        {% endblock %}
+    </head>
+       
+    <body>
+        <h1>OBAFEMI AWOLOWO UNIVERSITY, ILE-IFE, NIGERIA.</h1>
+        <h2>CURRICULUM VITAE</h2>
+        {% block content %}
+
+        {% endblock %}
+        
+    </body>
+</html>

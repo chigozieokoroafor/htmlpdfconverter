@@ -1,0 +1,7 @@
+{% block content %}
+   {% for i in keys %}
+   <p> {{i}} : {{data[i]}} </p>
+      {% endfor %}
+   <a href= "{{url_for('user.download', filename=data.fullname, route=download)}}" > Download </a>
+
+{% endblock %}
