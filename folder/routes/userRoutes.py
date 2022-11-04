@@ -10,11 +10,11 @@ client = pymongo.MongoClient()
 db = client["test_form"]
 test_form = db["test"]
 
-user = Blueprint("user", __name__, url_prefix="/user")
+user = Blueprint("user", __name__)
 
 @user.route("/")
 def test():
-    return render_template_string("<h1>This is the test page</h1>"), 200
+    return redirect(url_for("user.fillform"))
 
 @user.route("/fillform", methods=["GET", "POST"])
 def fillform():
@@ -23,7 +23,7 @@ def fillform():
         data = {}
         for i in info.keys():
             data[i] = info.get(i)
-        data.pop("csrf_token")
+        #data.pop("csrf_token")
         data = json.dumps(data)
         data = bytes(data,encoding="utf-8")        
         return redirect(url_for("user.getResume", token=data.hex()))
@@ -32,7 +32,7 @@ def fillform():
         form = UserDetails()
         eduForm = EducationalBackground()
 
-        return render_template("forms.html", form=form, eduForm=eduForm)
+        return render_template("form2.html", form=form, eduForm=eduForm)
 
 @user.route("/getDetail/<token>",methods=["GET"])
 def getResume(token):
@@ -43,16 +43,15 @@ def getResume(token):
     download_route = f"""http://127.0.0.1:5000{url_for("user.getResume", token=token)}"""
     data.pop("_id")
     data_keys = [i for i in data.keys()]
-    #print(route)
-    #PdfConvert.html_to_pdf(route, data["fullname"])
-    return render_template("resume.html", data=data, download = download_route, keys=data_keys)
+    #create a loop for how it would be shown, esspecially those with text areas to be listed as points
+    
+    return render_template("page2.html", data=data, download = download_route)
 
 @user.route("/download/<filename>")
 def download(filename):
     route = (request.args.get("route"))
     PdfConvert.html_to_pdf(route, filename)
-    tic = time.perf_counter()
+    #tic = time.perf_counter()
     return send_file(f"../resumes/{filename}.pdf", as_attachment=True, download_name="oau_cv.pdf") #, time.sleep(5), 
-    toc = time.perf_counter()
-    PdfConvert.delete_files(filename)
+    
     
