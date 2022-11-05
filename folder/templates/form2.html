@@ -1,273 +1,707 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
     <title>CV</title>
-    <link rel="stylesheet" href="../static/frms.css">
-    <br>
-    
-</head>
-<body>
-    <h1>Obafemi Awolowo University, Ile-Ife, Nigeria </h1>
+    <link rel="stylesheet" href="../static/frms.css" />
+    <br />
+  </head>
+  <body>
+    <h1>Obafemi Awolowo University, Ile-Ife, Nigeria</h1>
     <h2>Curriculum Vitae</h2>
     <div class="fullform">
-        <div class="A">A. PERSONAL DATA</div>
-        <form method="POST" action="/fillform">
-            <label for="fname" class="form-label">Full Name (surname first and in capitals)</label><br>
-            <input type="text" id="fname" class="form" name="fname"><br>
-            <label for="dob" class="form-label">Date of Birth</label><br>
-            <input type="date" id="dob" class="form" name="dob"><br>
-            <div>
-                <br>Contact Details <br>
-                <label for="r-address" class="form-label">Residential Address</label><br>
-                <input type="text" id="r-address" class="form" name="res_address"><br>
-                <label for="e-address" class="form-label">E-mail Address(es)</label><br>
-                <input type="email" id="e-address" class="form" name="email_address"><br>
-                <label for="p-number" class="form-label">Mobile Telephone Number(s)</label><br>
-                <input type="text" id="p-number" class="form" name="phone_number"><br>
-            </div>
-            <div>
-                <label for="nationality" class="form-label">Nationality</label><br>
-                <input type="text" id="nationality" class="form" name="nationality"><br>
-            </div>
-            <div>
-                <label for="soo" class="form-label">State of Origin</label><br>
-                <input type="text" id="soo" class="form" name="soo"><br>
-            </div>
-            <div>
-                <label for="sd" class="form-label">Senatorial District</label><br>
-                <input type="text" id="sd" class="form" name="sd"><br>
-            </div>
-            <div>
-                <label for="lga" class="form-label">Local Government Area</label><br>
-                <input type="text" id="lga" class="form" name="lga"><br>
-            </div>
-            <div>
-                <label for="pha" class="form-label">Permanent Home Address</label><br>
-                <input type="text" id="pha" class="form" name="pha"><br>
-            </div>
-            <div>
-                <label for="ms" class="form-label">Marital Status</label><br>
-                <input type="text" id="ms" class="form" name="ms"><br>
-            </div>
-            <div>
-                <label class="form-label">Number of Children and their Ages</label><br>
-                <input type="text" class="form" name="children_ages"><br>
-            </div>
-            <div>
-                <label class="form-label">Next of Kin</label><br>
-                <input type="text" class="form" name="nok_name"><br>
-            </div>
-            <div>
-                <br>Contact Details of Next of Kin <br>
-                <label class="form-label">Residential Address</label><br>
-                <input type="text" class="form" name="nok_res_address"><br>
-                <label class="form-label">E-mail Address(es)</label><br>
-                <input type="email" class="form" name="nok_email_address"><br>
-                <label class="form-label">Mobile Telephone Number(s)</label><br>
-                <input type="text" class="form" name="nok_phone_number"><br>
-            </div>
-            <div>
-                <label class="form-label">Date of Assumption of Duties</label><br>
-                <input type="date" class="form" name="date_duty_Assumption"><br>
-            </div>
-            <div>
-                <label class="form-label">Rank/Status on First Appointment</label><br>
-                <input type="text" class="form" name="first_rank"><br>
-            </div>
-            <div>
-                <label class="form-label">Present Status</label><br>
-                <input type="text" class="form" name="present_rank"><br>
-            </div>
-            <div>
-                <label class="form-label">Present Salary Grade Level and Step</label><br>
-                <input type="text" class="form" name="present_sal_grade_step"><br>
-            </div>
-            
-            <div>
-                <label class="form-label">Date of Last Promotion/Regrading</label><br>
-                <input type="date" class="form" name="date_last_promotion"><br>
-            </div>
-            <div>
-                <label class="form-label">Date of Confirmation of Appointment</label><br>
-                <input type="date" class="form" name="date_appointment_confirmation"><br>
-            </div>
-            <div>
-                <label class="form-label">Faculty/Directorate</label><br>
-                <input type="text" class="form" name="faculty_directorate"><br>
-            </div>
-            <div>
-                <label class="form-label">Department/Unit</label><br>
-                <input type="text" class="form" name="dept_unit"><br>
-            </div>
-            <div>B. EDUCATIONAL BACKGROUND
-                <span style="font-style: italic;">(chronologically arranged from the earliest to latest)</span>
-            </div>
-            <div>
-                <label class="form-label">Higher Educational Institutions Attended with Dates</label><br>
-                <textarea type="text" name="educational_instituitions" cols="50" rows="5"></textarea><br>
-            </div>
-            <div>
-                <label class="form-label">Academic/ Professional Qualifications and Distinctions Obtained with Dates</label><br>
-                <textarea type="text" name="professional_quals" cols="50" rows="5"></textarea><br>
-            </div>
-            <div>
-                Other Distinctions and Awards with Dates <br>
-                <div>
-                    <label class="form-label">(a) Scholarships</label><br>
-                    <textarea type="text" name="scholarships" cols="50" rows="5"></textarea><br>
-                </div>
-                <div>
-                    <label class="form-label">(b) Fellowships</label><br>
-                    <textarea type="text" name="Fellowships" cols="50" rows="5"></textarea><br>
-                </div>
-                <div>
-                    <label class="form-label">(c) Research Grants</label><br>
-                    <textarea type="text" name="Research" cols="50" rows="5"></textarea><br>
-                </div>
-                <div>
-                    <label class="form-label">(d) National Awards</label><br>
-                    <textarea type="text" name="national_awards" cols="50" rows="5"></textarea><br>
-                </div>
-                <div>
-                    <label class="form-label">(e) International Awards</label><br>
-                    <textarea type="text" name="International_Awards" cols="50" rows="5"></textarea><br>
-                </div>
-            </div>
-            <div>C. WORK EXPERIENCE WITH DATES
-            </div>
-            <div>
-                <label class="form-label">Previous Work Experience outside the University System</label><br>
-                <textarea type="text" name="Work_Experience_outside_university" cols="50" rows="5"></textarea><br>
-            </div>
-            <div>
-                <label class="form-label">Previous Work Experience in Other Universities</label><br>
-                <textarea type="text" name="Work_Experience_other_university" cols="50" rows="5"></textarea><br>
-            </div>
-            <div>
-                <label class="form-label">Work Experience in Obafemi Awolowo University</label><br>
-                <textarea type="text" name="Work_Experience_In_OAU" cols="50" rows="5"></textarea><br>
-            </div>
-            <div>
-                <label class="form-label">Graduate Student Supervision</label>
-                <span style="font-style: italic;">(to list names, Registration numbers and titles of theses)</span><br>
-                <div><label class="form-label">(a) By Research</label><br>
-                    <textarea type="text" name="Student_Supervision_By_Research" cols="50" rows="5"></textarea><br>
-                </div>
-                <div><label class="form-label">(b) By Long Essay</label><br>
-                    <textarea type="text" name="Student_Supervision_By_Essay" cols="50" rows="5"></textarea><br>
-                </div>
-            </div>
-            <div>
-                <label class="form-label">Undergraduate Supervision</label><br>
-                <textarea type="text" name="Undergraduate_Supervision" cols="50" rows="5"></textarea><br>
-            </div>
-            <div>
-                D. MEMBERSHIP OF PROFESSIONAL BODIES WITH DATES
-                <span style="font-style: italic;">(Current financial member)</span>
-            </div>
-            <div>
-                <textarea type="text" name="membership_professional_bodies" cols="50" rows="5"></textarea><br>
-            </div>
-            <div>E. PUBLICATIONS</div>
-            <div>
-                <label class="form-label">Theses/Dissertations</label><br>
-                <textarea  id="" cols="50" rows="5" name="theses_dessertations"></textarea><br><br>
-            </div>
-            <div>
-                <label class="form-label">Books and Monographs</label><br>
+      <div class="A sec">A. PERSONAL DATA</div>
+      <form method="POST" action="/fillform">
+        <div class="input-div">
+          <div>
+            <label for="fname" class="form-label"
+              >Full Name (surname first and in
+              capitals)</label
+            ><br />
+            <input
+              type="text"
+              id="fname"
+              class="form"
+              name="fname" /><br />
+          </div>
+          <div>
+            <label for="dob" class="form-label"
+              >Date of Birth</label
+            ><br />
+            <input
+              type="date"
+              id="dob"
+              class="form"
+              name="dob" /><br />
+          </div>
+        </div>
+        <br />
+        <span class="section-head">Contact Details</span>
+        <br />
+        <div class="input-div">
+          <div>
+            <label for="r-address" class="form-label"
+              >Residential Address</label
+            ><br />
+            <input
+              type="text"
+              id="r-address"
+              class="form"
+              name="res_address" /><br />
+          </div>
+          <div>
+            <label for="e-address" class="form-label"
+              >E-mail Address(es)</label
+            ><br />
+            <input
+              type="email"
+              id="e-address"
+              class="form"
+              name="email_address" /><br />
+          </div>
+          <div>
+            <label for="p-number" class="form-label"
+              >Mobile Telephone Number(s)</label
+            ><br />
+            <input
+              type="text"
+              id="p-number"
+              class="form"
+              name="phone_number" /><br />
+          </div>
+        </div>
+        <div class="input-div">
+          <div>
+            <label for="nationality" class="form-label"
+              >Nationality</label
+            ><br />
+            <input
+              type="text"
+              id="nationality"
+              class="form"
+              name="nationality" /><br />
+          </div>
+          <div>
+            <label for="soo" class="form-label"
+              >State of Origin</label
+            ><br />
+            <input
+              type="text"
+              id="soo"
+              class="form"
+              name="soo" /><br />
+          </div>
+        </div>
 
-                <label class="form-label">(a) Authored</label>
+        <div>
+          <label for="sd" class="form-label"
+            >Senatorial District</label
+          ><br />
+          <input
+            type="text"
+            id="sd"
+            class="form"
+            name="sd" /><br />
+        </div>
+        <div>
+          <label for="lga" class="form-label"
+            >Local Government Area</label
+          ><br />
+          <input
+            type="text"
+            id="lga"
+            class="form"
+            name="lga" /><br />
+        </div>
+        <div>
+          <label for="pha" class="form-label"
+            >Permanent Home Address</label
+          ><br />
+          <input
+            type="text"
+            id="pha"
+            class="form"
+            name="pha" /><br />
+        </div>
+        <div>
+          <label for="ms" class="form-label"
+            >Marital Status</label
+          ><br />
+          <input
+            type="text"
+            id="ms"
+            class="form"
+            name="ms" /><br />
+        </div>
+        <div>
+          <label class="form-label"
+            >Number of Children and their Ages</label
+          ><br />
+          <input
+            type="text"
+            class="form"
+            name="children_ages" /><br />
+        </div>
+        <div>
+          <label class="form-label">Next of Kin</label
+          ><br />
+          <input
+            type="text"
+            class="form"
+            name="nok_name" /><br />
+        </div>
+        <div>
+          <br />Contact Details of Next of Kin <br />
+          <label class="form-label"
+            >Residential Address</label
+          ><br />
+          <input
+            type="text"
+            class="form"
+            name="nok_res_address" /><br />
+          <label class="form-label"
+            >E-mail Address(es)</label
+          ><br />
+          <input
+            type="email"
+            class="form"
+            name="nok_email_address" /><br />
+          <label class="form-label"
+            >Mobile Telephone Number(s)</label
+          ><br />
+          <input
+            type="text"
+            class="form"
+            name="nok_phone_number" /><br />
+        </div>
+        <div>
+          <label class="form-label"
+            >Date of Assumption of Duties</label
+          ><br />
+          <input
+            type="date"
+            class="form"
+            name="date_duty_Assumption" /><br />
+        </div>
+        <div>
+          <label class="form-label"
+            >Rank/Status on First Appointment</label
+          ><br />
+          <input
+            type="text"
+            class="form"
+            name="first_rank" /><br />
+        </div>
+        <div>
+          <label class="form-label">Present Status</label
+          ><br />
+          <input
+            type="text"
+            class="form"
+            name="present_rank" /><br />
+        </div>
+        <div>
+          <label class="form-label"
+            >Present Salary Grade Level and Step</label
+          ><br />
+          <input
+            type="text"
+            class="form"
+            name="present_sal_grade_step" /><br />
+        </div>
 
-                <span style="font-style: italic;">(not below Senior Lecturer)</span><br>
+        <div>
+          <label class="form-label"
+            >Date of Last Promotion/Regrading</label
+          ><br />
+          <input
+            type="date"
+            class="form"
+            name="date_last_promotion" /><br />
+        </div>
+        <div>
+          <label class="form-label"
+            >Date of Confirmation of Appointment</label
+          ><br />
+          <input
+            type="date"
+            class="form"
+            name="date_appointment_confirmation" /><br />
+        </div>
+        <div>
+          <label class="form-label"
+            >Faculty/Directorate</label
+          ><br />
+          <input
+            type="text"
+            class="form"
+            name="faculty_directorate" /><br />
+        </div>
+        <div>
+          <label class="form-label">Department/Unit</label
+          ><br />
+          <input
+            type="text"
+            class="form"
+            name="dept_unit" /><br />
+        </div>
+        <div class="sec">
+          <br />
+          <span>B. EDUCATIONAL BACKGROUND</span>
 
-                <textarea  id="" cols="50" rows="5" name="books_authored"></textarea><br>
+          <span style="font-style: italic"
+            >(chronologically arranged from the earliest to
+            latest)</span
+          >
+        </div>
 
-                <label class="form-label">(a) Edited</label><br>
+        <div>
+          <label class="form-label"
+            >Higher Educational Institutions Attended with
+            Dates</label
+          ><br />
+          <textarea
+            type="text"
+            name="educational_instituitions"
+            cols="50"
+            rows="5"></textarea
+          ><br />
+        </div>
+        <div>
+          <label class="form-label"
+            >Academic/ Professional Qualifications and
+            Distinctions Obtained with Dates</label
+          ><br />
+          <textarea
+            type="text"
+            name="professional_quals"
+            cols="50"
+            rows="5"></textarea
+          ><br />
+        </div>
+        <br />
+        <div>
+          Other Distinctions and Awards with Dates
+          <br /><br />
+          <div>
+            <label class="form-label"
+              >(a) Scholarships</label
+            ><br />
+            <textarea
+              type="text"
+              name="scholarships"
+              cols="50"
+              rows="5"></textarea
+            ><br />
+          </div>
+          <div>
+            <label class="form-label">(b) Fellowships</label
+            ><br />
+            <textarea
+              type="text"
+              name="Fellowships"
+              cols="50"
+              rows="5"></textarea
+            ><br />
+          </div>
+          <div>
+            <label class="form-label"
+              >(c) Research Grants</label
+            ><br />
+            <textarea
+              type="text"
+              name="Research"
+              cols="50"
+              rows="5"></textarea
+            ><br />
+          </div>
+          <div>
+            <label class="form-label"
+              >(d) National Awards</label
+            ><br />
+            <textarea
+              type="text"
+              name="national_awards"
+              cols="50"
+              rows="5"></textarea
+            ><br />
+          </div>
+          <div>
+            <label class="form-label"
+              >(e) International Awards</label
+            ><br />
+            <textarea
+              type="text"
+              name="International_Awards"
+              cols="50"
+              rows="5"></textarea
+            ><br />
+          </div>
+        </div>
+        <div class="sec">C. WORK EXPERIENCE WITH DATES</div>
+        <div>
+          <label class="form-label"
+            >Previous Work Experience outside the University
+            System</label
+          ><br />
+          <textarea
+            type="text"
+            name="Work_Experience_outside_university"
+            cols="50"
+            rows="5"></textarea
+          ><br />
+        </div>
+        <div>
+          <label class="form-label"
+            >Previous Work Experience in Other
+            Universities</label
+          ><br />
+          <textarea
+            type="text"
+            name="Work_Experience_other_university"
+            cols="50"
+            rows="5"></textarea
+          ><br />
+        </div>
+        <div>
+          <label class="form-label"
+            >Work Experience in Obafemi Awolowo
+            University</label
+          ><br />
+          <textarea
+            type="text"
+            name="Work_Experience_In_OAU"
+            cols="50"
+            rows="5"></textarea
+          ><br />
+        </div>
+        <div>
+          <label class="form-label"
+            >Graduate Student Supervision</label
+          >
+          <span style="font-style: italic"
+            >(to list names, Registration numbers and titles
+            of theses)</span
+          ><br />
+          <div>
+            <label class="form-label">(a) By Research</label
+            ><br />
+            <textarea
+              type="text"
+              name="Student_Supervision_By_Research"
+              cols="50"
+              rows="5"></textarea
+            ><br />
+          </div>
+          <div>
+            <label class="form-label"
+              >(b) By Long Essay</label
+            ><br />
+            <textarea
+              type="text"
+              name="Student_Supervision_By_Essay"
+              cols="50"
+              rows="5"></textarea
+            ><br />
+          </div>
+        </div>
+        <div>
+          <label class="form-label"
+            >Undergraduate Supervision</label
+          ><br />
+          <textarea
+            type="text"
+            name="Undergraduate_Supervision"
+            cols="50"
+            rows="5"></textarea
+          ><br />
+        </div>
+        <div class="sec">
+          D. MEMBERSHIP OF PROFESSIONAL BODIES WITH DATES
+          <span style="font-style: italic"
+            >(Current financial member)</span
+          >
+        </div>
+        <div>
+          <textarea
+            type="text"
+            name="membership_professional_bodies"
+            cols="50"
+            rows="5"></textarea
+          ><br />
+        </div>
+        <div class="sec">E. PUBLICATIONS</div>
+        <div>
+          <label class="form-label"
+            >Theses/Dissertations</label
+          ><br />
+          <textarea
+            id=""
+            cols="50"
+            rows="5"
+            name="theses_dessertations"></textarea
+          ><br /><br />
+        </div>
+        <div>
+          <label class="form-label"
+            >Books and Monographs</label
+          ><br />
 
-                <textarea  id="" cols="50" rows="5" name="books_edited"></textarea><br>
-            </div>
-            <div>
-                <label class="form-label">Contribution to Books</label><br>
-                <textarea  id="" cols="50" rows="5" name="book_contributions"></textarea><br>
-            </div>
-            <div>
-                <label class="form-label">Published Journal Articles</label><br>
-                <textarea  id="" cols="50" rows="5" name="published_journals"></textarea><br>
-            </div>
-            <div>
-                <label class="form-label">Edited Conference Proceedings</label><br>
+          <label class="form-label">(a) Authored</label>
 
-                <label class="form-label">(a) Refereed</label><br>
+          <span style="font-style: italic"
+            >(not below Senior Lecturer)</span
+          ><br />
 
-                <textarea  id="" cols="50" rows="5" name="conference_proceedings_referred"></textarea><br>
+          <textarea
+            id=""
+            cols="50"
+            rows="5"
+            name="books_authored"></textarea
+          ><br />
 
-                <label class="form-label">(a) Non-Refereed</label><br>
+          <label class="form-label">(a) Edited</label><br />
 
-                <textarea  id="" cols="50" rows="5" name="conference_proceedings_non-referred" ></textarea><br>
-            </div>
-            <div>
-                <label class="form-label">Articles Accepted for Publication</label><br>
-                <textarea  id="" cols="50" rows="5" name="articles_accepted_for_publication"></textarea><br>
-            </div>
-            <div>
-                <label class="form-label">Manuscripts Submitted for Publication</label><br>
-                <textarea  id="" cols="50" rows="5" name="manuscripts_submitted_for_publication"></textarea><br>
-            </div>
-            <div>
-                <label class="form-label">Creative Works/Patents</label><br>
-                <textarea  type="text" cols="50" rows="5" name="works_patents"></textarea><br>
-            </div>
-            <div>
-                <label class="form-label">Technical Reports</label><br>
-                <textarea type="text" cols="50" rows="5" name="technical_reports"></textarea><br>
-            </div>
-            <div>
-                <label class="form-label">Papers and Works in Progress</label><br>
-                <textarea  type="text" cols="50" rows="5" name="papers_works_in_progress"></textarea><br>
-            </div>
-            <div>
-                <br>E. PROFESSIONAL ACCOMPLISHMENTS <br>
-                <span style="font-style: italic;">(Note: This section is to be written in prose form with no numbering/bulleting, and with points/ideas separated using paragraphs. The section should address the candidate’s measurable achievements/contributions as an academic/researcher that are possibly quantified with figures, percentages and statistics. These may include: problems identified and solved and the possible number of persons/things positively affected; ideas or innovations introduced to improve a system/thing; training a number of students on special skills and its positive impact in the system; procedures or systems developed/ restructured for improvement; special projects worked on and positive impact on people/system; awards, scholarships, and commendations received for specific activities; research outcomes that result into increased revenue or sales, etc.)</span><br>
-                <textarea  type="text" cols="50" rows="5" name="professional_accomplishments"></textarea><br>
-            </div>
-            <div>
-                <label class="form-label">G. CONFERENCES, SEMINARS AND WORKSHOPS ATTENDED WITH DATES</label><br>
-                <textarea type="text" name="conferences_sem_workshops" cols="50" rows="5"></textarea><br>
-            </div>
-            <div>
-                <label class="form-label">H. CURRENT RESEARCH ACTIVITIES</label><br>
-                <textarea type="text" name="research_activities" cols="50" rows="5"></textarea><br>
-            </div>
-            <div>
-                I. OTHER RELEVANT INFORMATION:<br>
-                <div>
-                    <label class="form-label">(1) Services within the Department</label><br>
-                    <textarea type="text" name="services_within_dept" cols="50" rows="5"></textarea><br>
-                </div>
-                <div>
-                    <label class="form-label">(2) Services within the Faculty</label><br>
-                    <textarea type="text" name="service_within_faculty" cols="50" rows="5"></textarea><br>
-                </div>
-                <div>
-                    <label class="form-label">(3) Services within the University</label><br>
-                    <textarea type="text" name="service_within_uni" cols="50" rows="5"></textarea><br>
-                </div>
-                <div>
-                    <label class="form-label">(4) Services outside the University</label><br>
-                    <textarea type="text" name="services_outside_uni" cols="50" rows="5"></textarea><br>
-                </div>
-            </div>
-            <div>
-                J. CONTRIBUTION TO KNOWLEDGE <br>
-                <span style="font-style: italic;">(Note: This section is to be written in prose form with no numbering/bulleting, and with points/ideas separated using paragraphs. The section should address the candidate’s addition to existing knowledge in area of specialization arising from extensive and innovative research)</span><br>
-                <textarea  name="contribution_to_knowledge" cols="50" rows="5"></textarea><br>
-            </div>
-            <div class="row">
-                <input type="submit" value="Next">
-            </div> 
-        </form>
+          <textarea
+            id=""
+            cols="50"
+            rows="5"
+            name="books_edited"></textarea
+          ><br />
+        </div>
+        <div>
+          <label class="form-label"
+            >Contribution to Books</label
+          ><br />
+          <textarea
+            id=""
+            cols="50"
+            rows="5"
+            name="book_contributions"></textarea
+          ><br />
+        </div>
+        <div>
+          <label class="form-label"
+            >Published Journal Articles</label
+          ><br />
+          <textarea
+            id=""
+            cols="50"
+            rows="5"
+            name="published_journals"></textarea
+          ><br />
+        </div>
+        <div>
+          <label class="form-label"
+            >Edited Conference Proceedings</label
+          ><br />
+
+          <label class="form-label">(a) Refereed</label
+          ><br />
+
+          <textarea
+            id=""
+            cols="50"
+            rows="5"
+            name="conference_proceedings_referred"></textarea
+          ><br />
+
+          <label class="form-label">(a) Non-Refereed</label
+          ><br />
+
+          <textarea
+            id=""
+            cols="50"
+            rows="5"
+            name="conference_proceedings_non-referred"></textarea
+          ><br />
+        </div>
+        <div>
+          <label class="form-label"
+            >Articles Accepted for Publication</label
+          ><br />
+          <textarea
+            id=""
+            cols="50"
+            rows="5"
+            name="articles_accepted_for_publication"></textarea
+          ><br />
+        </div>
+        <div>
+          <label class="form-label"
+            >Manuscripts Submitted for Publication</label
+          ><br />
+          <textarea
+            id=""
+            cols="50"
+            rows="5"
+            name="manuscripts_submitted_for_publication"></textarea
+          ><br />
+        </div>
+        <div>
+          <label class="form-label"
+            >Creative Works/Patents</label
+          ><br />
+          <textarea
+            type="text"
+            cols="50"
+            rows="5"
+            name="works_patents"></textarea
+          ><br />
+        </div>
+        <div>
+          <label class="form-label">Technical Reports</label
+          ><br />
+          <textarea
+            type="text"
+            cols="50"
+            rows="5"
+            name="technical_reports"></textarea
+          ><br />
+        </div>
+        <div>
+          <label class="form-label"
+            >Papers and Works in Progress</label
+          ><br />
+          <textarea
+            type="text"
+            cols="50"
+            rows="5"
+            name="papers_works_in_progress"></textarea
+          ><br />
+        </div>
+        <div>
+          <div class="sec">
+            E. PROFESSIONAL ACCOMPLISHMENTS
+          </div>
+          <span style="font-style: italic"
+            >(Note: This section is to be written in prose
+            form with no numbering/bulleting, and with
+            points/ideas separated using paragraphs. The
+            section should address the candidate’s
+            measurable achievements/contributions as an
+            academic/researcher that are possibly quantified
+            with figures, percentages and statistics. These
+            may include: problems identified and solved and
+            the possible number of persons/things positively
+            affected; ideas or innovations introduced to
+            improve a system/thing; training a number of
+            students on special skills and its positive
+            impact in the system; procedures or systems
+            developed/ restructured for improvement; special
+            projects worked on and positive impact on
+            people/system; awards, scholarships, and
+            commendations received for specific activities;
+            research outcomes that result into increased
+            revenue or sales, etc.)</span
+          ><br /><br />
+          <textarea
+            type="text"
+            cols="50"
+            rows="5"
+            name="professional_accomplishments"></textarea
+          ><br />
+        </div>
+        <div>
+          <label class="form-label sec"
+            >F. CONFERENCES, SEMINARS AND WORKSHOPS ATTENDED
+            WITH DATES</label
+          ><br />
+          <textarea
+            type="text"
+            name="conferences_sem_workshops"
+            cols="50"
+            rows="5"></textarea
+          ><br />
+        </div>
+        <div>
+          <label class="form-label sec"
+            >G. CURRENT RESEARCH ACTIVITIES</label
+          ><br />
+          <textarea
+            type="text"
+            name="research_activities"
+            cols="50"
+            rows="5"></textarea
+          ><br />
+        </div>
+        <div>
+          <div class="sec">
+            H. OTHER RELEVANT INFORMATION:
+          </div>
+          <br />
+          <div>
+            <label class="form-label"
+              >(1) Services within the Department</label
+            ><br />
+            <textarea
+              type="text"
+              name="services_within_dept"
+              cols="50"
+              rows="5"></textarea
+            ><br />
+          </div>
+          <div>
+            <label class="form-label"
+              >(2) Services within the Faculty</label
+            ><br />
+            <textarea
+              type="text"
+              name="service_within_faculty"
+              cols="50"
+              rows="5"></textarea
+            ><br />
+          </div>
+          <div>
+            <label class="form-label"
+              >(3) Services within the University</label
+            ><br />
+            <textarea
+              type="text"
+              name="service_within_uni"
+              cols="50"
+              rows="5"></textarea
+            ><br />
+          </div>
+          <div>
+            <label class="form-label"
+              >(4) Services outside the University</label
+            ><br />
+            <textarea
+              type="text"
+              name="services_outside_uni"
+              cols="50"
+              rows="5"></textarea
+            ><br />
+          </div>
+        </div>
+        <div>
+          <div class="sec">
+            J. CONTRIBUTION TO KNOWLEDGE
+          </div>
+
+          <span style="font-style: italic"
+            >(Note: This section is to be written in prose
+            form with no numbering/bulleting, and with
+            points/ideas separated using paragraphs. The
+            section should address the candidate’s addition
+            to existing knowledge in area of specialization
+            arising from extensive and innovative
+            research)</span
+          ><br /><br />
+          <textarea
+            name="contribution_to_knowledge"
+            cols="50"
+            rows="5"></textarea
+          ><br />
+        </div>
+        <div class="row">
+          <input type="submit" value="Next" />
+        </div>
+      </form>
     </div>
-</body>
+  </body>
 </html>
