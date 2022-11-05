@@ -3,3 +3,5 @@ linuxvenv
 wkhtmltox_0.12.6-1.focal_amd64.deb
 resumes
 folder/routes/__pycache__
+folder/models/__pycache__
+folder/__pycache__
