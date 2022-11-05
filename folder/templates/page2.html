@@ -1,328 +1,594 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/frms.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/frms.css" />
     <title>Document</title>
-    <h1>Obafemi Awolowo University, Ile-Ife, Nigeria </h1>
+    <h1>Obafemi Awolowo University, Ile-Ife, Nigeria</h1>
     <h2>Curriculum Vitae</h2>
-</head>
-<body>
+  </head>
+  <body>
     <div class="fullform">
-        <div id="A" class="major"><h3>A. PERSONAL DATA:</h3>
-            <ol>
-                <li class="list">Full Name: <p class="res_data">{{data.fname}}</p> </li> 
-                <li class="list">Date of Birth: <p class="res_data">{{data.dob}}</p> </li> 
-                <li class="list">Contact Details
-                    <ol class="list" type="a">
-                        <li>Residential Address: <p class="res_data_e">{{data.res_address}}</p></li> 
-                        <li>Email Address(es): <p class="res_data_e">{{data['email_address']}}</p></li>
-                        <li>Mobile Telephone Number(s): <p class="res_data_ee">{{data['phone_number']}} </p></li>
-                    </ol>
-                </li> 
-                <li class="list">Nationality: <p class="res_data"> {{data.nationality}}</p> </li> 
-                <li class="list">State of Origin: <p class="res_data">{{data.soo}} </p></li> 
-                <li class="list">Senatorial District: <p class="res_data">{{data.sd}}</p> </li> 
-                <li class="list">Local Government Area: <p class="res_data_e">{{data.lga}}</p> </li> 
-                <li class="list">Permanent Home Address: <p class="res_data_e">{{data.pha}}</p> </li> 
-                <li class="list">Marital Status: <p class="res_data">{{data.ms}} </p></li> 
-                <li class="list">Number of Children and their Ages:<p class="res_data_ee"> {{data.children_ages}}</p> </li>
-                <li class="list">Next of Kin:  <p class="res_data">{{data['nok_name']}} </p></li> 
-                <li class="list">Contact Details of Next of Kin: 
-                    <ol class="list" type="a">
-                        <li>Residential Address:<p class="res_data_e"> {{data['nok_res_address']}}</p></li> 
-                        <li>Email Address(es): <p class="res_data_e">{{data['nok_email_address']}}</p></li> 
-                        <li>Mobile Telephone Number(s): <p class="res_data_ee">{{data['nok_phone_number']}}</p> </li> 
-                    </ol>
-                </li> <br>
-                <li class="list">Date of Assumption of Duty: <p class="res_data_e">{{data['date_duty_Assumption']}} </p></li>
-                <li class="list">Rank/Status of First Appointment: <p class="res_data_ee">{{data['first_rank']}} </p></li>
-                <li class="list">Present Status: <p class="res_data">{{data['present_rank']}}</p></li>
-                <li class="list">Present Salary Grade Level and Step: <p class="res_data_ee">{{data['present_sal_grade_step']}}</p> </li> 
-                <li class="list">Date of Last Promotion/Regrading: <p class="res_data_ee">{{data['date_last_promotion']}}</p> </li> 
-                <li class="list">Date of Confirmation of Appointment: <p class="res_data_ee">{{data['date_appointment_confirmation']}}</p> </li> 
-                <li class="list">Faculty/Directorate: <p class="res_data_e">{{data['faculty_directorate']}}</p></li> 
-                <li class="list">Department/Unit: <p class="res_data_e">{{data['dept_unit']}}</p></li> 
+      <div id="A" class="major">
+        <h3>A. PERSONAL DATA:</h3>
+        <ol>
+          <li class="list">
+            Full Name:
+            <span class="res_data">{{data.fname}}</span>
+          </li>
+          <li class="list">
+            Date of Birth:
+            <span class="res_data">{{data.dob}}</span>
+          </li>
+          <li class="list">
+            Contact Details
+            <ol class="list" type="a">
+              <li>
+                Residential Address:
+                <span class="res_data_e"
+                  >{{data.res_address}}</span
+                >
+              </li>
+              <li>
+                Email Address(es):
+                <span class="res_data_e"
+                  >{{data['email_address']}}</span
+                >
+              </li>
+              <li>
+                Mobile Telephone Number(s):
+                <span class="res_data_ee"
+                  >{{data['phone_number']}}
+                </span>
+              </li>
             </ol>
-        </div>
-        <div id="B" class="major"><h3>B. EDUCATIONAL BACKGROUND:</h3> <span style="font-style: italic;">(chronologically arranged from the earliest to latest)</span>
-            <ol>
-                <li class="list">Higher Educational Institutions Attended with Dates:
-                    <ol class="list" type="i">
-                        {% for i in data['educational_instituitions'] %}
-                        <li>{{i}}</li> <br>
-                        {% endfor %}
-                    </ol>
-                </li> <br>
-                <li class="list">Academic/ Professional Qualifications and Distinctions Obtained with Dates:
-                    <ol class="list" type="i">
-                        {% for i in data['professional_quals'] %}
-                        <li>{{i}}</li> <br>
-                        {% endfor %}
-                        
-                    </ol>
-                </li> <br>
-                <li class="list">Other Distinctions and Awards with Dates: 
-                    <ol class="list" type="a">
-                        <li>Scholarships:
-                            <ol class="list" type="i">
-                                {% for i in data['scholarships'] %}
-                                <li>{{i}}</li> <br>
-                                {% endfor %}
-                            </ol>
-                        </li> <br>
-                        <li>Fellowships:
-                            <ol class="list" type="i">
-                                {% for i in data['Fellowships'] %}
-                                <li>{{i}}</li> <br>
-                                {% endfor %}
-                            </ol>
-                        </li> <br>
-                        <li>Research Grants:
-                            <ol class="list" type="i">
-                                {% for i in data['Research'] %}
-                                <li>{{i}}</li> <br>
-                                {% endfor %}
-                            </ol>
-                        </li> <br>
-                        <li>National Awardss:
-                            <ol class="list" type="i">
-                                {% for i in data['national_awards'] %}
-                                <li>{{i}}</li> <br>
-                                {% endfor %}
-                            </ol>
-                        </li> <br>
-                        <li>International Awards:
-                            <ol class="list" type="i">
-                                {% for i in data['International_Awards'] %}
-                                <li>{{i}}</li> <br>
-                                {% endfor %}
-                            </ol>
-                        </li> <br>
-                    </ol>
-                </li> <br>
+          </li>
+          <li class="list">
+            Nationality:
+            <span class="res_data">
+              {{data.nationality}}</span
+            >
+          </li>
+          <li class="list">
+            State of Origin:
+            <span class="res_data">{{data.soo}} </span>
+          </li>
+          <li class="list">
+            Senatorial District:
+            <span class="res_data">{{data.sd}}</span>
+          </li>
+          <li class="list">
+            Local Government Area:
+            <span class="res_data_e">{{data.lga}}</span>
+          </li>
+          <li class="list">
+            Permanent Home Address:
+            <span class="res_data_e">{{data.pha}}</span>
+          </li>
+          <li class="list">
+            Marital Status:
+            <span class="res_data">{{data.ms}} </span>
+          </li>
+          <li class="list">
+            Number of Children and their Ages:<span
+              class="res_data_ee">
+              {{data.children_ages}}</span
+            >
+          </li>
+          <li class="list">
+            Next of Kin:
+            <span class="res_data"
+              >{{data['nok_name']}}
+            </span>
+          </li>
+          <li class="list">
+            Contact Details of Next of Kin:
+            <ol class="list" type="a">
+              <li>
+                Residential Address:<span
+                  class="res_data_e">
+                  {{data['nok_res_address']}}</span
+                >
+              </li>
+              <li>
+                Email Address(es):
+                <span class="res_data_e"
+                  >{{data['nok_email_address']}}</span
+                >
+              </li>
+              <li>
+                Mobile Telephone Number(s):
+                <span class="res_data_ee"
+                  >{{data['nok_phone_number']}}</span
+                >
+              </li>
             </ol>
-        </div>
-        <div id="C" class="major"><h3>C. WORK EXPERIENCE WITH DATES:</h3>
-            <ol>
-                <li class="list">Previous Work Experience outside the University System:
-                    <ol class="list" type="i">
-                        {% for i in data['Work_Experience_outside_university'] %}
-                        <li>{{i}}</li> <br>
-                        {% endfor %}
-                    </ol>
-                </li> <br>
-                <li class="list">Previous Work Experience in Other Universities:
-                    <ol class="list" type="i">
-                        {% for i in data['Work_Experience_other_university'] %}
-                        <li>{{i}}</li> <br>
-                        {% endfor %}
-                    </ol>
-                </li> <br>
-                <li class="list">Work Experience in Obafemi Awolowo University:
-                    <ol class="list" type="i">
-                        {% for i in data['Work_Experience_In_OAU'] %}
-                        <li>{{i}}</li> <br>
-                        {% endfor %}
-                    </ol>
-                </li> <br>
-                <li class="list">Graduate Student Supervision: <span style="font-style: italic;">(to list names, Registration numbers and titles of theses)</span> 
-                    <ol class="list" type="a">
-                        <li>By Research:
-                            <ol class="list" type="i">
-                                {% for i in data['Student_Supervision_By_Research'] %}
-                                <li>{{i}}</li> <br>
-                                {% endfor %}
-                            </ol>
-                        </li> <br>
-                        <li>By Long Essay:
-                            <ol class="list" type="i">
-                                {% for i in data['Student_Supervision_By_Essay'] %}
-                                <li>{{i}}</li> <br>
-                                {% endfor %}
-                            </ol>
-                        </li> <br>
-                    </ol>
-                </li> <br>
-                <li class="list">Undergraduate Student Supervision:
-                    <ol class="list" type="i">
-                        {% for i in data['Undergraduate_Supervision'] %}
-                        <li>{{i}}</li> <br>
-                        {% endfor %}
-                    </ol>
-                </li> <br>
+          </li>
+          <br />
+          <li class="list">
+            Date of Assumption of Duty:
+            <span class="res_data_e"
+              >{{data['date_duty_Assumption']}}
+            </span>
+          </li>
+          <li class="list">
+            Rank/Status of First Appointment:
+            <span class="res_data_ee"
+              >{{data['first_rank']}}
+            </span>
+          </li>
+          <li class="list">
+            Present Status:
+            <span class="res_data"
+              >{{data['present_rank']}}</span
+            >
+          </li>
+          <li class="list">
+            Present Salary Grade Level and Step:
+            <span class="res_data_ee"
+              >{{data['present_sal_grade_step']}}</span
+            >
+          </li>
+          <li class="list">
+            Date of Last Promotion/Regrading:
+            <span class="res_data_ee"
+              >{{data['date_last_promotion']}}</span
+            >
+          </li>
+          <li class="list">
+            Date of Confirmation of Appointment:
+            <span class="res_data_ee"
+              >{{data['date_appointment_confirmation']}}</span
+            >
+          </li>
+          <li class="list">
+            Faculty/Directorate:
+            <span class="res_data_e"
+              >{{data['faculty_directorate']}}</span
+            >
+          </li>
+          <li class="list">
+            Department/Unit:
+            <span class="res_data_e"
+              >{{data['dept_unit']}}</span
+            >
+          </li>
+        </ol>
+      </div>
+      <div id="B" class="major">
+        <h3>B. EDUCATIONAL BACKGROUND:</h3>
+        <span style="font-style: italic"
+          >(chronologically arranged from the earliest to
+          latest)</span
+        >
+        <ol>
+          <li class="list">
+            Higher Educational Institutions Attended with
+            Dates:
+            <ol class="list" type="i">
+              {% for i in data['educational_instituitions']
+              %}
+              <li>{{i}}</li>
+              <br />
+              {% endfor %}
             </ol>
-        </div>
-        <div id="D" class="major"><h3>D. MEMBERSHIP OF PROFESSIONAL BODIES WITH DATES:</h3> <span style="font-style: italic;">(Current financial member)</span>
-            <ol>
+          </li>
+          <br />
+          <li class="list">
+            Academic/ Professional Qualifications and
+            Distinctions Obtained with Dates:
+            <ol class="list" type="i">
+              {% for i in data['professional_quals'] %}
+              <li>{{i}}</li>
+              <br />
+              {% endfor %}
+            </ol>
+          </li>
+          <br />
+          <li class="list">
+            Other Distinctions and Awards with Dates:
+            <ol class="list" type="a">
+              <li>
+                Scholarships:
                 <ol class="list" type="i">
-                    {% for i in data['membership_professional_bodies'] %}
-                    <li>{{i}}</li> <br>
-                    {% endfor %}
+                  {% for i in data['scholarships'] %}
+                  <li>{{i}}</li>
+                  <br />
+                  {% endfor %}
                 </ol>
-            </ol>
-        </div>
-        <div id="E" class="major"><h3>E. PUBLICATIONS</h3>
-            <ol>
-                <li class="list">Theses/Dissertations: <span style="font-style: italic;">(to be listed in Roman figures)</span>
-                    <ol class="list" type="i">
-                        {% for i in data['theses_dessertations'] %}
-                        <li>{{i}}</li> <br>
-                        {% endfor %}
-                    </ol>
-                </li> <br>
-                <li class="list">Books and Monographs:
-                    <ol class="list" type="a">
-                        <li>Authored: <span style="font-style: italic;">(not below Senior Lecturer)</span> 
-                            <ol class="list" type="i">
-                                {% for i in data['books_authored'] %}
-                                <li>{{i}}</li> <br>
-                                {% endfor %}
-                            </ol>
-                        </li> <br>
-                        <li>Edited:
-                            <ol class="list" type="i">
-                                {% for i in data['books_edited'] %}
-                                <li>{{i}}</li> <br>
-                                {% endfor %}
-                            </ol>
-                        </li> <br>
-                    </ol>
-                </li> <br>
-                <li class="list">Contribution to Books:
-                    <ol class="list" type="i">
-                        {% for i in data['book_contributions'] %}
-                        <li>{{i}}</li> <br>
-                        {% endfor %}
-                    </ol>
-                </li> <br>
-                <li class="list">Published Journal Articles:
-                    <ol class="list" type="i">
-                        {% for i in data['published_journals'] %}
-                        <li>{{i}}</li> <br>
-                        {% endfor %}
-                    </ol>
-                </li> <br>
-                <li class="list">Edited Conference Proceedings:
-                    <ol class="list" type="a">
-                        <li>Refereed:
-                            <ol class="list" type="i">
-                                {% for i in data['conference_proceedings_referred'] %}
-                                <li>{{i}}</li> <br>
-                                {% endfor %}
-                            </ol>
-                        </li> <br>
-                        <li>Non-Refereed:
-                            <ol class="list" type="i">
-                                {% for i in data['conference_proceedings_non-referred'] %}
-                                <li>{{i}}</li> <br>
-                                {% endfor %}
-                            </ol>
-                        </li> <br>
-                    </ol>
-                </li> <br>
-                <li class="list">Articles Accepted for Publication:
-                    <ol class="list" type="i">
-                        {% for i in data['articles_accepted_for_publication'] %}
-                        <li>{{i}}</li> <br>
-                        {% endfor %}
-                    </ol>
-                </li> <br>
-                <li class="list">Manuscripts Submitted for Publication:
-                    <ol class="list" type="i">
-                        {% for i in data['manuscripts_submitted_for_publication'] %}
-                        <li>{{i}}</li> <br>
-                        {% endfor %}
-                    </ol>
-                </li> <br>
-                <li class="list">Creative Works/Patents:
-                    <ol class="list" type="i">
-                        {% for i in data['works_patents'] %}
-                        <li>{{i}}</li> <br>
-                        {% endfor %}
-                    </ol>
-                </li> <br>
-                <li class="list">Technical Reports:
-                    <ol class="list" type="i">
-                        {% for i in data['technical_reports'] %}
-                        <li>{{i}}</li> <br>
-                        {% endfor %}
-                    </ol>
-                </li> <br>
-                <li class="list">Papers and Works in Progress:
-                    <ol class="list" type="i">
-                        {% for i in data['papers_works_in_progress'] %}
-                        <li>{{i}}</li> <br>
-                        {% endfor %}
-                    </ol>
-                </li> <br>
-            </ol>
-        </div>
-        <div id="F" class="major"><h3>F. PROFESSIONAL ACCOMPLISHMENTS </h3>
-            <p>{{data['professional_accomplishments']}}</p>
-        </div>
-        <div id="G" class="major"><h3>G. CONFERENCES, SEMINARS AND WORKSHOPS ATTENDED WITH DATES:</h3>
-            <ol>
+              </li>
+              <br />
+              <li>
+                Fellowships:
                 <ol class="list" type="i">
-                   {% for i in data['conferences_sem_workshops'] %}
-                   <li>{{i}}</li> <br>
-                   {% endfor %}
+                  {% for i in data['Fellowships'] %}
+                  <li>{{i}}</li>
+                  <br />
+                  {% endfor %}
                 </ol>
-            </ol>
-        </div>
-        <div id="H" class="major"><h3>H. CURRENT RESEARCH ACTIVITIES:</h3>
-            <ol>
+              </li>
+              <br />
+              <li>
+                Research Grants:
                 <ol class="list" type="i">
-                    {% for i in data['research_activities'] %}
-                    <li>{{i}}</li> <br>
-                    {% endfor %}
+                  {% for i in data['Research'] %}
+                  <li>{{i}}</li>
+                  <br />
+                  {% endfor %}
                 </ol>
+              </li>
+              <br />
+              <li>
+                National Awardss:
+                <ol class="list" type="i">
+                  {% for i in data['national_awards'] %}
+                  <li>{{i}}</li>
+                  <br />
+                  {% endfor %}
+                </ol>
+              </li>
+              <br />
+              <li>
+                International Awards:
+                <ol class="list" type="i">
+                  {% for i in data['International_Awards']
+                  %}
+                  <li>{{i}}</li>
+                  <br />
+                  {% endfor %}
+                </ol>
+              </li>
+              <br />
             </ol>
-        </div>
-        <div id="I" class="major"><h3>I. OTHER RELEVANT INFORMATION: </h3>
-            <ol>
-                <li class="list">Services within the Department:
-                    <ol class="list" type="i">
-                        {% for i in data['services_within_dept'] %}
-                        <li>{{i}}</li> <br>
-                        {% endfor %}
-                    </ol>
-                </li> <br>
-                <li class="list">Services within the Faculty:
-                    <ol class="list" type="i">
-                        {% for i in data['service_within_faculty'] %}
-                        <li>{{i}}</li> <br>
-                        {% endfor %}
-                    </ol>
-                </li> <br>
-                <li class="list">Services within the University:
-                    <ol class="list" type="i">
-                        {% for i in data['service_within_uni'] %}
-                        <li>{{i}}</li> <br>
-                        {% endfor %}
-                    </ol>
-                </li> <br>
-                <li class="list">Services outside the University:
-                    <ol class="list" type="i">
-                        {% for i in data['services_outside_uni'] %}
-                        <li>{{i}}</li> <br>
-                        {% endfor %}
-                    </ol>
-                </li> <br>
+          </li>
+          <br />
+        </ol>
+      </div>
+      <div id="C" class="major">
+        <h3>C. WORK EXPERIENCE WITH DATES:</h3>
+        <ol>
+          <li class="list">
+            Previous Work Experience outside the University
+            System:
+            <ol class="list" type="i">
+              {% for i in
+              data['Work_Experience_outside_university'] %}
+              <li>{{i}}</li>
+              <br />
+              {% endfor %}
             </ol>
-        </div>
-        <div id="J" class="major"><h3>J. CONTRIBUTION TO KNOWLEDGE</h3>
-            
-            <p> {{data['contribution_to_knowledge']}} </p>
-            
-        </div> 
-        <br>
-        <div class="sig_date">
-            <span class="item">Signature:________________________ </span>
-            <span class="item">Date:________________________</span>
-        </div>
-        <a href= "{{url_for('user.download', filename=data.fname, route=download)}}" > Download </a>
+          </li>
+          <br />
+          <li class="list">
+            Previous Work Experience in Other Universities:
+            <ol class="list" type="i">
+              {% for i in
+              data['Work_Experience_other_university'] %}
+              <li>{{i}}</li>
+              <br />
+              {% endfor %}
+            </ol>
+          </li>
+          <br />
+          <li class="list">
+            Work Experience in Obafemi Awolowo University:
+            <ol class="list" type="i">
+              {% for i in data['Work_Experience_In_OAU'] %}
+              <li>{{i}}</li>
+              <br />
+              {% endfor %}
+            </ol>
+          </li>
+          <br />
+          <li class="list">
+            Graduate Student Supervision:
+            <span style="font-style: italic"
+              >(to list names, Registration numbers and
+              titles of theses)</span
+            >
+            <ol class="list" type="a">
+              <li>
+                By Research:
+                <ol class="list" type="i">
+                  {% for i in
+                  data['Student_Supervision_By_Research'] %}
+                  <li>{{i}}</li>
+                  <br />
+                  {% endfor %}
+                </ol>
+              </li>
+              <br />
+              <li>
+                By Long Essay:
+                <ol class="list" type="i">
+                  {% for i in
+                  data['Student_Supervision_By_Essay'] %}
+                  <li>{{i}}</li>
+                  <br />
+                  {% endfor %}
+                </ol>
+              </li>
+              <br />
+            </ol>
+          </li>
+          <br />
+          <li class="list">
+            Undergraduate Student Supervision:
+            <ol class="list" type="i">
+              {% for i in data['Undergraduate_Supervision']
+              %}
+              <li>{{i}}</li>
+              <br />
+              {% endfor %}
+            </ol>
+          </li>
+          <br />
+        </ol>
+      </div>
+      <div id="D" class="major">
+        <h3>
+          D. MEMBERSHIP OF PROFESSIONAL BODIES WITH DATES:
+        </h3>
+        <span style="font-style: italic"
+          >(Current financial member)</span
+        >
+        <ol>
+          <ol class="list" type="i">
+            {% for i in
+            data['membership_professional_bodies'] %}
+            <li>{{i}}</li>
+            <br />
+            {% endfor %}
+          </ol>
+        </ol>
+      </div>
+      <div id="E" class="major">
+        <h3>E. PUBLICATIONS</h3>
+        <ol>
+          <li class="list">
+            Theses/Dissertations:
+            <span style="font-style: italic"
+              >(to be listed in Roman figures)</span
+            >
+            <ol class="list" type="i">
+              {% for i in data['theses_dessertations'] %}
+              <li>{{i}}</li>
+              <br />
+              {% endfor %}
+            </ol>
+          </li>
+          <br />
+          <li class="list">
+            Books and Monographs:
+            <ol class="list" type="a">
+              <li>
+                Authored:
+                <span style="font-style: italic"
+                  >(not below Senior Lecturer)</span
+                >
+                <ol class="list" type="i">
+                  {% for i in data['books_authored'] %}
+                  <li>{{i}}</li>
+                  <br />
+                  {% endfor %}
+                </ol>
+              </li>
+              <br />
+              <li>
+                Edited:
+                <ol class="list" type="i">
+                  {% for i in data['books_edited'] %}
+                  <li>{{i}}</li>
+                  <br />
+                  {% endfor %}
+                </ol>
+              </li>
+              <br />
+            </ol>
+          </li>
+          <br />
+          <li class="list">
+            Contribution to Books:
+            <ol class="list" type="i">
+              {% for i in data['book_contributions'] %}
+              <li>{{i}}</li>
+              <br />
+              {% endfor %}
+            </ol>
+          </li>
+          <br />
+          <li class="list">
+            Published Journal Articles:
+            <ol class="list" type="i">
+              {% for i in data['published_journals'] %}
+              <li>{{i}}</li>
+              <br />
+              {% endfor %}
+            </ol>
+          </li>
+          <br />
+          <li class="list">
+            Edited Conference Proceedings:
+            <ol class="list" type="a">
+              <li>
+                Refereed:
+                <ol class="list" type="i">
+                  {% for i in
+                  data['conference_proceedings_referred'] %}
+                  <li>{{i}}</li>
+                  <br />
+                  {% endfor %}
+                </ol>
+              </li>
+              <br />
+              <li>
+                Non-Refereed:
+                <ol class="list" type="i">
+                  {% for i in
+                  data['conference_proceedings_non-referred']
+                  %}
+                  <li>{{i}}</li>
+                  <br />
+                  {% endfor %}
+                </ol>
+              </li>
+              <br />
+            </ol>
+          </li>
+          <br />
+          <li class="list">
+            Articles Accepted for Publication:
+            <ol class="list" type="i">
+              {% for i in
+              data['articles_accepted_for_publication'] %}
+              <li>{{i}}</li>
+              <br />
+              {% endfor %}
+            </ol>
+          </li>
+          <br />
+          <li class="list">
+            Manuscripts Submitted for Publication:
+            <ol class="list" type="i">
+              {% for i in
+              data['manuscripts_submitted_for_publication']
+              %}
+              <li>{{i}}</li>
+              <br />
+              {% endfor %}
+            </ol>
+          </li>
+          <br />
+          <li class="list">
+            Creative Works/Patents:
+            <ol class="list" type="i">
+              {% for i in data['works_patents'] %}
+              <li>{{i}}</li>
+              <br />
+              {% endfor %}
+            </ol>
+          </li>
+          <br />
+          <li class="list">
+            Technical Reports:
+            <ol class="list" type="i">
+              {% for i in data['technical_reports'] %}
+              <li>{{i}}</li>
+              <br />
+              {% endfor %}
+            </ol>
+          </li>
+          <br />
+          <li class="list">
+            Papers and Works in Progress:
+            <ol class="list" type="i">
+              {% for i in data['papers_works_in_progress']
+              %}
+              <li>{{i}}</li>
+              <br />
+              {% endfor %}
+            </ol>
+          </li>
+          <br />
+        </ol>
+      </div>
+      <div id="F" class="major">
+        <h3>F. PROFESSIONAL ACCOMPLISHMENTS</h3>
+        <p>{{data['professional_accomplishments']}}</p>
+      </div>
+      <div id="G" class="major">
+        <h3>
+          G. CONFERENCES, SEMINARS AND WORKSHOPS ATTENDED
+          WITH DATES:
+        </h3>
+        <ol>
+          <ol class="list" type="i">
+            {% for i in data['conferences_sem_workshops'] %}
+            <li>{{i}}</li>
+            <br />
+            {% endfor %}
+          </ol>
+        </ol>
+      </div>
+      <div id="H" class="major">
+        <h3>H. CURRENT RESEARCH ACTIVITIES:</h3>
+        <ol>
+          <ol class="list" type="i">
+            {% for i in data['research_activities'] %}
+            <li>{{i}}</li>
+            <br />
+            {% endfor %}
+          </ol>
+        </ol>
+      </div>
+      <div id="I" class="major">
+        <h3>I. OTHER RELEVANT INFORMATION:</h3>
+        <ol>
+          <li class="list">
+            Services within the Department:
+            <ol class="list" type="i">
+              {% for i in data['services_within_dept'] %}
+              <li>{{i}}</li>
+              <br />
+              {% endfor %}
+            </ol>
+          </li>
+          <br />
+          <li class="list">
+            Services within the Faculty:
+            <ol class="list" type="i">
+              {% for i in data['service_within_faculty'] %}
+              <li>{{i}}</li>
+              <br />
+              {% endfor %}
+            </ol>
+          </li>
+          <br />
+          <li class="list">
+            Services within the University:
+            <ol class="list" type="i">
+              {% for i in data['service_within_uni'] %}
+              <li>{{i}}</li>
+              <br />
+              {% endfor %}
+            </ol>
+          </li>
+          <br />
+          <li class="list">
+            Services outside the University:
+            <ol class="list" type="i">
+              {% for i in data['services_outside_uni'] %}
+              <li>{{i}}</li>
+              <br />
+              {% endfor %}
+            </ol>
+          </li>
+          <br />
+        </ol>
+      </div>
+      <div id="J" class="major">
+        <h3>J. CONTRIBUTION TO KNOWLEDGE</h3>
+
+        <p>{{data['contribution_to_knowledge']}}</p>
+      </div>
+      <br />
+      <div class="sig_date">
+        <span class="item"
+          >Signature:________________________
+        </span>
+        <span class="item"
+          >Date:________________________</span
+        >
+      </div>
+      <br />
+      <a
+        class="btn"
+        href="{{url_for('user.download', filename=data.fname, route=download)}}">
+        Download
+      </a>
     </div>
-</body>
+  </body>
 </html>

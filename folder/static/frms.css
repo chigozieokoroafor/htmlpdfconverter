@@ -78,6 +78,16 @@ label {
   padding: 12px 12px 12px 0;
   display: inline-block;
 }
+.btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: left;
+  text-decoration: none;
+}
 input[type="submit"] {
   background-color: #4caf50;
   color: white;
@@ -95,8 +105,7 @@ input[type="submit"]:hover {
 }
 .res_data {
   position: relative;
-  left: 120px;
-  top: -35px;
+  font-weight: 500;
 }
 .fullform {
   position: relative;
@@ -108,12 +117,12 @@ input[type="submit"]:hover {
 }
 .res_data_e {
   position: relative;
+  font-weight: 500;
 }
 
 .res_data_ee {
   position: relative;
-  left: 250px;
-  top: -33px;
+  font-weight: 500;
 }
 
 .item {
