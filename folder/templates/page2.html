@@ -50,45 +50,54 @@
             <ol>
                 <li class="list">Higher Educational Institutions Attended with Dates:
                     <ol class="list" type="i">
-                        <!-- create a jinja for loop here  to output the result in a list format-->
-                        <li>{{data['educational_instituitions']}}</li> <br>
+                        {% for i in data['educational_instituitions'] %}
+                        <li>{{i}}</li> <br>
+                        {% endfor %}
                     </ol>
                 </li> <br>
                 <li class="list">Academic/ Professional Qualifications and Distinctions Obtained with Dates:
                     <ol class="list" type="i">
-                        <li>{{data['professional_quals']}}</li> <br>
+                        {% for i in data['professional_quals'] %}
+                        <li>{{i}}</li> <br>
+                        {% endfor %}
+                        
                     </ol>
                 </li> <br>
                 <li class="list">Other Distinctions and Awards with Dates: 
                     <ol class="list" type="a">
                         <li>Scholarships:
                             <ol class="list" type="i">
-                                <!-- create a jinja for loop here  to output the result in a list format-->
-                                <li>{{data['scholarships']}}</li> <br>
+                                {% for i in data['scholarships'] %}
+                                <li>{{i}}</li> <br>
+                                {% endfor %}
                             </ol>
                         </li> <br>
                         <li>Fellowships:
                             <ol class="list" type="i">
-                                <!-- create a jinja for loop here  to output the result in a list format-->
-                                <li>{{data['Fellowships']}}</li> <br>
+                                {% for i in data['Fellowships'] %}
+                                <li>{{i}}</li> <br>
+                                {% endfor %}
                             </ol>
                         </li> <br>
                         <li>Research Grants:
                             <ol class="list" type="i">
-                                <!-- create a jinja for loop here  to output the result in a list format-->
-                                <li>{{data['Research']}}</li> <br>
+                                {% for i in data['Research'] %}
+                                <li>{{i}}</li> <br>
+                                {% endfor %}
                             </ol>
                         </li> <br>
                         <li>National Awardss:
                             <ol class="list" type="i">
-                                <!-- create a jinja for loop here  to output the result in a list format-->
-                                <li>{{data['national_awards']}}</li> <br>
+                                {% for i in data['national_awards'] %}
+                                <li>{{i}}</li> <br>
+                                {% endfor %}
                             </ol>
                         </li> <br>
                         <li>International Awards:
                             <ol class="list" type="i">
-                                <!-- create a jinja for loop here  to output the result in a list format-->
-                                <li>{{data['International_Awards']}}</li> <br>
+                                {% for i in data['International_Awards'] %}
+                                <li>{{i}}</li> <br>
+                                {% endfor %}
                             </ol>
                         </li> <br>
                     </ol>
@@ -99,42 +108,48 @@
             <ol>
                 <li class="list">Previous Work Experience outside the University System:
                     <ol class="list" type="i">
-                        <!-- create a jinja for loop here  to output the result in a list format-->
-                        <li>{{data['Work_Experience_outside_university']}}</li> <br>
+                        {% for i in data['Work_Experience_outside_university'] %}
+                        <li>{{i}}</li> <br>
+                        {% endfor %}
                     </ol>
                 </li> <br>
                 <li class="list">Previous Work Experience in Other Universities:
                     <ol class="list" type="i">
-                        <!-- create a jinja for loop here  to output the result in a list format-->
-                        <li>{{data['Work_Experience_other_university']}}</li> <br>
+                        {% for i in data['Work_Experience_other_university'] %}
+                        <li>{{i}}</li> <br>
+                        {% endfor %}
                     </ol>
                 </li> <br>
                 <li class="list">Work Experience in Obafemi Awolowo University:
                     <ol class="list" type="i">
-                        <!-- create a jinja for loop here  to output the result in a list format-->
-                        <li>{{data['Work_Experience_In_OAU']}}</li> <br>
+                        {% for i in data['Work_Experience_In_OAU'] %}
+                        <li>{{i}}</li> <br>
+                        {% endfor %}
                     </ol>
                 </li> <br>
                 <li class="list">Graduate Student Supervision: <span style="font-style: italic;">(to list names, Registration numbers and titles of theses)</span> 
                     <ol class="list" type="a">
                         <li>By Research:
                             <ol class="list" type="i">
-                                <!-- create a jinja for loop here  to output the result in a list format-->
-                                <li>{{data['Student_Supervision_By_Research']}}</li> <br>
+                                {% for i in data['Student_Supervision_By_Research'] %}
+                                <li>{{i}}</li> <br>
+                                {% endfor %}
                             </ol>
                         </li> <br>
                         <li>By Long Essay:
                             <ol class="list" type="i">
-                                <!-- create a jinja for loop here  to output the result in a list format-->
-                                <li>{{data['Student_Supervision_By_Essay']}}</li> <br>
+                                {% for i in data['Student_Supervision_By_Essay'] %}
+                                <li>{{i}}</li> <br>
+                                {% endfor %}
                             </ol>
                         </li> <br>
                     </ol>
                 </li> <br>
                 <li class="list">Undergraduate Student Supervision:
                     <ol class="list" type="i">
-                        <!-- create a jinja for loop here  to output the result in a list format-->
-                        <li>{{data['Undergraduate_Supervision']}}</li> <br>
+                        {% for i in data['Undergraduate_Supervision'] %}
+                        <li>{{i}}</li> <br>
+                        {% endfor %}
                     </ol>
                 </li> <br>
             </ol>
@@ -142,8 +157,9 @@
         <div id="D" class="major"><h3>D. MEMBERSHIP OF PROFESSIONAL BODIES WITH DATES:</h3> <span style="font-style: italic;">(Current financial member)</span>
             <ol>
                 <ol class="list" type="i">
-                    <!-- create a jinja for loop here  to output the result in a list format-->
-                    <li>{{data['membership_professional_bodies']}}</li> <br>
+                    {% for i in data['membership_professional_bodies'] %}
+                    <li>{{i}}</li> <br>
+                    {% endfor %}
                 </ol>
             </ol>
         </div>
@@ -151,101 +167,116 @@
             <ol>
                 <li class="list">Theses/Dissertations: <span style="font-style: italic;">(to be listed in Roman figures)</span>
                     <ol class="list" type="i">
-                        <!-- create a jinja for loop here  to output the result in a list format-->
-                        <li>{{data['theses_dessertations']}}</li> <br>
+                        {% for i in data['theses_dessertations'] %}
+                        <li>{{i}}</li> <br>
+                        {% endfor %}
                     </ol>
                 </li> <br>
                 <li class="list">Books and Monographs:
                     <ol class="list" type="a">
                         <li>Authored: <span style="font-style: italic;">(not below Senior Lecturer)</span> 
                             <ol class="list" type="i">
-                                <!-- create a jinja for loop here  to output the result in a list format-->
-                                <li>{{data['books_authored']}}</li> <br>
+                                {% for i in data['books_authored'] %}
+                                <li>{{i}}</li> <br>
+                                {% endfor %}
                             </ol>
                         </li> <br>
                         <li>Edited:
                             <ol class="list" type="i">
-                                <!-- create a jinja for loop here  to output the result in a list format-->
-                                <li>{{data['books_edited']}}</li> <br>
+                                {% for i in data['books_edited'] %}
+                                <li>{{i}}</li> <br>
+                                {% endfor %}
                             </ol>
                         </li> <br>
                     </ol>
                 </li> <br>
                 <li class="list">Contribution to Books:
                     <ol class="list" type="i">
-                        <!-- create a jinja for loop here  to output the result in a list format-->
-                        <li>{{data['book_contributions']}}</li> <br>
+                        {% for i in data['book_contributions'] %}
+                        <li>{{i}}</li> <br>
+                        {% endfor %}
                     </ol>
                 </li> <br>
                 <li class="list">Published Journal Articles:
                     <ol class="list" type="i">
-                        <!-- create a jinja for loop here  to output the result in a list format-->
-                        <li>{{data['published_journals']}}</li> <br>
+                        {% for i in data['published_journals'] %}
+                        <li>{{i}}</li> <br>
+                        {% endfor %}
                     </ol>
                 </li> <br>
                 <li class="list">Edited Conference Proceedings:
                     <ol class="list" type="a">
                         <li>Refereed:
                             <ol class="list" type="i">
-                                <!-- create a jinja for loop here  to output the result in a list format-->
-                                <li>{{data['conference_proceedings_referred']}}</li> <br>
+                                {% for i in data['conference_proceedings_referred'] %}
+                                <li>{{i}}</li> <br>
+                                {% endfor %}
                             </ol>
                         </li> <br>
                         <li>Non-Refereed:
                             <ol class="list" type="i">
-                                <!-- create a jinja for loop here  to output the result in a list format-->
-                                <li>{{data['conference_proceedings_non-referred']}}</li> <br>
+                                {% for i in data['conference_proceedings_non-referred'] %}
+                                <li>{{i}}</li> <br>
+                                {% endfor %}
                             </ol>
                         </li> <br>
                     </ol>
                 </li> <br>
                 <li class="list">Articles Accepted for Publication:
                     <ol class="list" type="i">
-                        <!-- create a jinja for loop here  to output the result in a list format-->
-                        <li>{{data['articles_accepted_for_publication']}}</li> <br>
+                        {% for i in data['articles_accepted_for_publication'] %}
+                        <li>{{i}}</li> <br>
+                        {% endfor %}
                     </ol>
                 </li> <br>
                 <li class="list">Manuscripts Submitted for Publication:
                     <ol class="list" type="i">
-                        <!-- create a jinja for loop here  to output the result in a list format-->
-                        <li>{{data['manuscripts_submitted_for_publication']}}</li> <br>
+                        {% for i in data['manuscripts_submitted_for_publication'] %}
+                        <li>{{i}}</li> <br>
+                        {% endfor %}
                     </ol>
                 </li> <br>
                 <li class="list">Creative Works/Patents:
                     <ol class="list" type="i">
-                        <!-- create a jinja for loop here  to output the result in a list format-->
-                        <li>{{data['works_patents']}}</li> <br>
+                        {% for i in data['works_patents'] %}
+                        <li>{{i}}</li> <br>
+                        {% endfor %}
                     </ol>
                 </li> <br>
                 <li class="list">Technical Reports:
                     <ol class="list" type="i">
-                        <!-- create a jinja for loop here  to output the result in a list format-->
-                        <li>{{data['technical_reports']}}</li> <br>
+                        {% for i in data['technical_reports'] %}
+                        <li>{{i}}</li> <br>
+                        {% endfor %}
                     </ol>
                 </li> <br>
                 <li class="list">Papers and Works in Progress:
                     <ol class="list" type="i">
-                        <!-- create a jinja for loop here  to output the result in a list format-->
-                        <li>{{data['papers_works_in_progress']}}</li> <br>
+                        {% for i in data['papers_works_in_progress'] %}
+                        <li>{{i}}</li> <br>
+                        {% endfor %}
                     </ol>
                 </li> <br>
             </ol>
         </div>
         <div id="F" class="major"><h3>F. PROFESSIONAL ACCOMPLISHMENTS </h3>
+            <p>{{data['professional_accomplishments']}}</p>
         </div>
         <div id="G" class="major"><h3>G. CONFERENCES, SEMINARS AND WORKSHOPS ATTENDED WITH DATES:</h3>
             <ol>
                 <ol class="list" type="i">
-                   <!-- create a jinja for loop here  to output the result in a list format-->
-                   <li>{{data['conferences_sem_workshops']}}</li> <br>
+                   {% for i in data['conferences_sem_workshops'] %}
+                   <li>{{i}}</li> <br>
+                   {% endfor %}
                 </ol>
             </ol>
         </div>
         <div id="H" class="major"><h3>H. CURRENT RESEARCH ACTIVITIES:</h3>
             <ol>
                 <ol class="list" type="i">
-                    <!-- create a jinja for loop here  to output the result in a list format-->
-                    <li>{{data['research_activities']}}</li> <br>
+                    {% for i in data['research_activities'] %}
+                    <li>{{i}}</li> <br>
+                    {% endfor %}
                 </ol>
             </ol>
         </div>
@@ -253,33 +284,38 @@
             <ol>
                 <li class="list">Services within the Department:
                     <ol class="list" type="i">
-                        <!-- create a jinja for loop here  to output the result in a list format-->
-                        <li>{{data['services_within_dept']}}</li> <br>
+                        {% for i in data['services_within_dept'] %}
+                        <li>{{i}}</li> <br>
+                        {% endfor %}
                     </ol>
                 </li> <br>
                 <li class="list">Services within the Faculty:
                     <ol class="list" type="i">
-                        <!-- create a jinja for loop here  to output the result in a list format-->
-                        <li>{{data['service_within_faculty']}}</li> <br>
+                        {% for i in data['service_within_faculty'] %}
+                        <li>{{i}}</li> <br>
+                        {% endfor %}
                     </ol>
                 </li> <br>
                 <li class="list">Services within the University:
                     <ol class="list" type="i">
-                        <!-- create a jinja for loop here  to output the result in a list format-->
-                        <li>{{data['service_within_uni']}}</li> <br>
+                        {% for i in data['service_within_uni'] %}
+                        <li>{{i}}</li> <br>
+                        {% endfor %}
                     </ol>
                 </li> <br>
                 <li class="list">Services outside the University:
                     <ol class="list" type="i">
-                        <!-- create a jinja for loop here  to output the result in a list format-->
-                        <li>{{data['services_outside_uni']}}</li> <br>
+                        {% for i in data['services_outside_uni'] %}
+                        <li>{{i}}</li> <br>
+                        {% endfor %}
                     </ol>
                 </li> <br>
             </ol>
         </div>
         <div id="J" class="major"><h3>J. CONTRIBUTION TO KNOWLEDGE</h3>
-            <!-- create a jinja for loop here  to output the result in a list format-->
-            <p> {{data['papers_works_in_progress']}} </p>
+            
+            <p> {{data['contribution_to_knowledge']}} </p>
+            
         </div> 
         <br>
         <div class="sig_date">

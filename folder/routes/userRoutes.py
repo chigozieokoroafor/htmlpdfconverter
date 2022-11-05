@@ -2,7 +2,7 @@ import pdb
 from flask import Blueprint, render_template, redirect, render_template_string, request, jsonify, url_for, send_file
 from folder.models.formModel import UserDetails, EducationalBackground
 import json, codecs, pdfkit, os, time
-import pymongo
+import pymongo, bson
 from folder.functions import PdfConvert
 
 
@@ -40,12 +40,32 @@ def getResume(token):
     data = codecs.decode(token, "hex").decode("utf-8")
     data = json.loads(str(data))
     test_form.insert_one(data)
+    data_keys = [i for i in data.keys()]
+    multiple_answer_keys = data_keys[24:57]
+    multiple_answer_keys.remove("professional_accomplishments")
+    print(multiple_answer_keys)
+    for i in multiple_answer_keys:
+        data[i] = data[i].splitlines()
     download_route = f"""http://127.0.0.1:5000{url_for("user.getResume", token=token)}"""
     data.pop("_id")
     data_keys = [i for i in data.keys()]
     #create a loop for how it would be shown, esspecially those with text areas to be listed as points
     
     return render_template("page2.html", data=data, download = download_route)
+
+@user.route("/getData",methods=["GET", "POST"])
+def getD():
+    #print("sdvdsv, sdv".splitlines())
+    if request.method == "GET":
+        data = test_form.find_one({"_id":bson.ObjectId("6364fe4b98c054c4a8e22e61")})
+        data.pop("_id")
+        data_keys = [i for i in data.keys()]
+        multiple_answer_keys = data_keys[24:57]
+        multiple_answer_keys.remove("professional_accomplishments")
+        for i in multiple_answer_keys:
+            data[i] = data[i].splitlines()
+        #print(multiple_answer_keys)
+        return render_template("page2.html", data=data)
 
 @user.route("/download/<filename>")
 def download(filename):
