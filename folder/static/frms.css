@@ -106,10 +106,12 @@ input[type="submit"]:hover {
 .res_data {
   position: relative;
   font-weight: 500;
+  float: right;
+  text-align: left;
 }
 .fullform {
   position: relative;
-  padding: 0 200px;
+  padding: 20px 200px;
   overflow-x: hidden;
   background-color: #f8f8f8;
   border-radius: 10px;
@@ -118,13 +120,34 @@ input[type="submit"]:hover {
 .res_data_e {
   position: relative;
   font-weight: 500;
+  float: right;
+  text-align: left;
 }
 
 .res_data_ee {
   position: relative;
   font-weight: 500;
+  float: right;
+  text-align: left;
 }
 
 .item {
   padding-left: 50px;
+}
+
+.list {
+  margin-bottom: 10px;
+}
+@media (max-width: 1024px) {
+  .fullform {
+    padding: 20px 20px;
+  }
+}
+@media (max-width: 700px) {
+  .fullform {
+    padding: 20px 10px;
+  }
+  .input-div {
+    flex-wrap: wrap;
+  }
 }

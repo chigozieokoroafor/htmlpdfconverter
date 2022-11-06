@@ -11,7 +11,7 @@
     <h2>Curriculum Vitae</h2>
   </head>
   <body>
-    <div class="fullform">
+    <div class="fullform form-2">
       <div id="A" class="major">
         <h3>A. PERSONAL DATA:</h3>
         <ol>
@@ -19,12 +19,14 @@
             Full Name:
             <span class="res_data">{{data.fname}}</span>
           </li>
+
           <li class="list">
             Date of Birth:
             <span class="res_data">{{data.dob}}</span>
           </li>
           <li class="list">
             Contact Details
+            <br />
             <ol class="list" type="a">
               <li>
                 Residential Address:
@@ -32,18 +34,21 @@
                   >{{data.res_address}}</span
                 >
               </li>
+              <br />
               <li>
                 Email Address(es):
                 <span class="res_data_e"
                   >{{data['email_address']}}</span
                 >
               </li>
+              <br />
               <li>
                 Mobile Telephone Number(s):
                 <span class="res_data_ee"
                   >{{data['phone_number']}}
                 </span>
               </li>
+              <br />
             </ol>
           </li>
           <li class="list">
