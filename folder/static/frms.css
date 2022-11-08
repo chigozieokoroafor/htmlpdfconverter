@@ -117,6 +117,14 @@ input[type="submit"]:hover {
   border-radius: 10px;
   box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
 }
+.form-2 {
+  position: relative;
+  padding: 20px 20px;
+  overflow-x: hidden;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+}
 .res_data_e {
   position: relative;
   font-weight: 500;
