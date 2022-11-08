@@ -159,3 +159,9 @@ input[type="submit"]:hover {
     flex-wrap: wrap;
   }
 }
+@media print {
+  /* All your print styles go here */
+  .btn {
+    display: none !important;
+  }
+}
