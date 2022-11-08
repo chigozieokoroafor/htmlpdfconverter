@@ -4,6 +4,8 @@ from folder.models.formModel import UserDetails, EducationalBackground
 import json, codecs, pdfkit, os, time
 import pymongo, bson
 from folder.functions import PdfConvert
+#from weasyprint import HTML
+from weasyprint import HTML
 
 
 #client = pymongo.MongoClient()
@@ -70,8 +72,10 @@ def getResume(token):
 @user.route("/download/<filename>")
 def download(filename):
     route = (request.args.get("route"))
-    PdfConvert.html_to_pdf(route, filename)
-    #tic = time.perf_counter()
-    return send_file(f"../resumes/{filename}.pdf", as_attachment=True, download_name="oau_cv.pdf") #, time.sleep(5), 
+    #PdfConvert.html_to_pdf(route, filename)
     
+    pdf = HTML(url=route).write_pdf(f"./resumes/{filename}.pdf")
+    #tic = time.perf_counter()
+    #return send_file(pdf, download_name="oau_cv.pdf") #, time.sleep(5), 
+    return send_file(f"../resumes/{filename}.pdf", as_attachment=True, download_name="oau_cv.pdf") #, time.sleep(5),
     
