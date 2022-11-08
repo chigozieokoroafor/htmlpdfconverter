@@ -74,8 +74,8 @@ def download(filename):
     route = (request.args.get("route"))
     #PdfConvert.html_to_pdf(route, filename)
     
-    pdf = HTML(url=route).write_pdf('new.pdf')
+    pdf = HTML(url=route).write_pdf(f"./resumes/{filename}.pdf")
     #tic = time.perf_counter()
-    return send_file(pdf, download_name="oau_cv.pdf") #, time.sleep(5), 
-    
+    #return send_file(pdf, download_name="oau_cv.pdf") #, time.sleep(5), 
+    return send_file(f"../resumes/{filename}.pdf", as_attachment=True, download_name="oau_cv.pdf") #, time.sleep(5),
     
